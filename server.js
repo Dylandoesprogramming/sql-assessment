@@ -32,10 +32,17 @@ massive({
 
 
 // ===== Build enpoints below ============
-
-
-
-
+app.get('/api/users', mainCtrl.getUsers);
+app.get('/api/vehicles', mainCtrl.getVehicles);
+app.post('/api/users', mainCtrl.postUser);
+app.post('/api/vehicles', mainCtrl.postVehicle);
+app.get('/api/user/:userId/vehiclecount', mainCtrl.countVehicles);
+app.get('/api/user/:userId/vehicle', mainCtrl.getVehiclesById);
+app.get('/api/vehicle', mainCtrl.getVehiclesByEmail);
+app.get('/api/newervehiclesbyyear', mainCtrl.getByYear);
+app.put('/api/vehicle/:vehicleId/user/:userId', mainCtrl.sellVehicle);
+app.delete('/api/user/:userId/vehicle/:vehicleId', mainCtrl.removeOwner);
+app.delete('/api/vehicle/:vehicleId', mainCtrl.removeVehicle);
 
 
 

@@ -1,0 +1,1 @@
+SELECT COUNT(owner_id) from vehicles WHERE owner_id = $1;
